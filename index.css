@@ -44,7 +44,7 @@
 
 html, body {
     background-color: black;
-    background-image: url(assets/images/bg_1.jpg);
+    background-image: url(assets/images/bg_1.webp);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -57,10 +57,37 @@ html, body {
     font-weight: bold;
     gap: 2em;
     justify-content: center;
-    padding: 2.5%;
+    padding: 1.5%;
     position: relative;
     user-select: none;
     z-index: 4;
+}
+
+#home {
+    background-color: rgba(255, 255, 255, 0.127);
+    border-radius:4rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#education {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#hobbies {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#inspirations {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .button:hover {

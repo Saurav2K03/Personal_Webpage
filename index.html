@@ -2,30 +2,47 @@
 
 <html lang="en">
     <head>
+        <link rel="preload" href="assets/fonts/MontserratBold.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/MontserratRegular.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/SigokaeDemoRegular.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/images/overlay_1.webp" as="image">
+        <link rel="preload" href="assets/images/bg_1.webp" as="image">
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link href="index.css" rel="stylesheet">
         <title>My Webpage</title>
     </head>
     <body>
-        
         <div class="nav_bar">
-            <div class="button"><i class="fas fa-home"></i>
-                <a href="index.html">Home</a>
+            <div class="button" id="home">
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
             </div>
-            <div class="button"><i class="fas fa-graduation-cap"></i>
-                <a href="education.html">Education</a>
+            <div class="button" id="education">
+                <a href="education.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    Education
+                </a>
             </div>
-            <div class="button"><i class="fas fa-heart"></i>
-                <a href="hobbies.html">Hobbies</a>
+            <div class="button" id="hobbies">
+                <a href="hobbies.html">
+                    <i class="fas fa-heart"></i>
+                    Hobbies
+                </a>
             </div>
-            <div class="button"><i class="fas fa-lightbulb"></i>
-                <a href="inspirations.html">Inspirations</a>
+            <div class="button" id="inspirations">
+                <a href="inspirations.html">
+                    <i class="fas fa-lightbulb"></i>
+                    Inspirations
+                </a>
             </div>
         </div>
 
         <div class="overlay-container">
             <div id="overlay-text">SAURAV SINGH</div>
-            <img src="assets/images/overlay_1.png" alt="overlay" id="overlay-image">
+            <img src="assets/images/overlay_1.webp" alt="overlay" id="overlay-image">
         </div>
         
         <div class="intro">

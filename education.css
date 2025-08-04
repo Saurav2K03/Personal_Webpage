@@ -44,7 +44,7 @@
 
 html, body {
     background-color: white;
-    background-image: url(assets/images/edu_large.jpeg);
+    background-image: url(assets/images/edu_large.webp);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
@@ -60,9 +60,36 @@ html, body {
     display: flex;
     justify-content: center;
     gap: 2em;
-    padding: 2.5%;
+    padding: 1.5%;
     user-select: none;
     z-index: 4;
+}
+
+#home {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#education {
+    background-color: rgba(0, 0, 0, 0.127);
+    border-radius:4rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#hobbies {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#inspirations {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .button:hover {
