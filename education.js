@@ -1,3 +1,16 @@
+const preloadImages = [
+    "assets/images/ryan_color.png",
+    "assets/images/dtu_color.png",
+    "assets/images/others_color.png",
+    "assets/images/extra1_color.png",
+    "assets/images/extra2_color.png",
+    "assets/images/extra3_color.png"
+];
+preloadImages.forEach(src => {
+    const img = new Image();
+    img.src = src;
+});
+
 const elements = document.getElementsByClassName("elements");
 
 for (let i = 0; i < elements.length; i++) {
