@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link href="index.css" rel="stylesheet">
+        <title>My Webpage</title>
+    </head>
+    <body>
+        
+        <div class="nav_bar">
+            <div class="button"><i class="fas fa-home"></i>
+                <a href="index.html">Home</a>
+            </div>
+            <div class="button"><i class="fas fa-graduation-cap"></i>
+                <a href="education.html">Education</a>
+            </div>
+            <div class="button"><i class="fas fa-heart"></i>
+                <a href="hobbies.html">Hobbies</a>
+            </div>
+            <div class="button"><i class="fas fa-lightbulb"></i>
+                <a href="inspirations.html">Inspirations</a>
+            </div>
+        </div>
+
+        <div class="overlay-container">
+            <div id="overlay-text">SAURAV SINGH</div>
+            <img src="assets/images/overlay_1.png" alt="overlay" id="overlay-image">
+        </div>
+        
+        <div class="intro">
+            <div id="intro-title">WELCOME!</div>
+            <div id="intro-text">this is my personal webpage.</div>
+        </div>
+    
+        <div class="music-player">
+            <audio loop id="bg-music" src="assets/audio/music.mp3"></audio>
+            <button id="play-btn" onclick="playMusic()">
+                <i class="fas fa-play"></i>
+            </button>
+        </div>
+
+        <script src="index.js"></script>
+
+    </body>
+</html>
