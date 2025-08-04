@@ -73,16 +73,16 @@ a {
 }
 
 #overlay-text {
-    left: 50%;
     color: #4666ab37;
     font-family: 'Smoosh', sans-serif;
-    font-size: 60rem;
+    font-size: 97vh;
+    left: 50%;
+    width: 90%;
     position: absolute;
     text-align: center;
     top: 50%;
     transform: translate(-50%, -50%);
     user-select: none;
-    width: 80%;
     z-index: 1;
 }
 

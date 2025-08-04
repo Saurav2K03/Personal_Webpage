@@ -36,14 +36,14 @@
     font-display: swap;
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Stevie Sans Black';
     src: url('assets/fonts/StevieSansBlack.woff2') format('woff2'),
          url('assets/fonts/StevieSansBlack.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
+} */
 
 @font-face {
     font-family: 'Stevie Sans Book';
@@ -63,9 +63,11 @@
 html, body {
     background-color: white;
     /* background-color: #ffffc8; */
-    background-image: url(assets/images/edu.jpeg);
+    background-image: url(assets/images/edu_large.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
 }
 
 .nav_bar {
@@ -83,7 +85,7 @@ html, body {
 }
 
 .button:hover {
-    color:#ff9d00;
+    color:#aa8d3a;
 }
 
 a {
@@ -93,10 +95,9 @@ a {
 
 #heading {
     text-align: center;
-    
     color: black;
     font-family: 'Kamikaze 3D', sans-serif;
-    font-size: 7.5rem;
+    font-size: 11vh;
     z-index: 2;
     margin: 0;
     user-select: none;
@@ -110,9 +111,9 @@ a {
 .content {
     position: relative;
     display: flex;
-    margin: 1rem;
-    top: 3rem;
-    left: 10rem;
+    margin: 1vh;
+    top: 2vh;
+    left: 16vh;
     max-width: 70%;
     user-select: none;
 }
@@ -121,12 +122,12 @@ a {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-right: 3rem;
+    margin-right: 5vh;
 }
 
 .block-title {
     font-family: 'Montserrat Bold', Arial, sans-serif;
-    font-size: 1.5rem;
+    font-size: 2.6vh;
     color: black;
     margin: 1rem;
 }
@@ -137,8 +138,8 @@ a {
 
 .circle {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 16vh;
+    height: 16vh;
     border-radius: 50%;
     background-color: white;
     border: 0px solid black;
@@ -173,35 +174,44 @@ a {
 
 #extra2 {
     width: 70%;
-    top: 78px;
-    left: 70px;
+    top: 8.67vh;
+    left: 7.7vh;
+}
+
+#extra3 {
+    width: 100%;
 }
 
 .elements {
     gap: 2rem;
     display: flex;
     flex-direction: row;
-    margin: 1rem;
+    margin: 1.7vh;
 }
 
 .text-box {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 1.78vh;
+    margin-bottom: 1.78vh;
     max-width: 60%;
 }
 
 .sub-headings {
     font-family: 'Montserrat Bold', Arial, sans-serif;
-    font-size: 1.25rem;
+    font-size: 2vh;
     color: black;
 }
 
 .regular-text p{
+    font-size: 1.5vh;
     font-style: italic;
 }
 
+.regular-text{
+    font-size: 1.6vh;
+}
+
 #quote {
-    font-size: 1em;
+    font-size: 1.6vh;
     text-align: center;
     font-style: italic;
     font-family: 'Cinzel', 'Montserrat', Arial, sans-serif;
@@ -218,7 +228,7 @@ a {
 
 #infinite {
     font-weight: bold;
-    font-size: 1.25em;
+    font-size: 2vh;
     font-style: normal;
 }
 
