@@ -1,0 +1,280 @@
+@keyframes vinyl-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url('assets/fonts/MontserratBold.woff2') format('woff2'),
+         url('assets/fonts/Montserratbold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url('assets/fonts/MontserratRegular.woff2') format('woff2'),
+         url('assets/fonts/MontserratRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Baskervville Italic';
+    src: url('assets/fonts/Baskervville-Italic.woff2') format('woff2'),
+         url('assets/fonts/Baskervville-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Baskerville Regular';
+    src: url('assets/fonts/Baskervville-Regular.woff2') format('woff2'),
+         url('assets/fonts/Baskervville-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: rgb(73 57 32);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.nav_bar {
+    position: relative;
+    font-family: 'Montserrat Bold', Arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: rgba(242, 240, 216);
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding: 1.5%;
+    user-select: none;
+    z-index: 4;
+}
+
+#home {
+    padding-left: 10px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+}
+#education {
+    padding-left: 10px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+}
+#hobbies {
+    padding-left: 10px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+}
+#inspirations {
+    background-color: rgb(49 35 12);
+    border-radius:4rem;
+    padding-left: 10px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+}
+
+.button:hover {
+    color: rgb(198, 154, 85);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 95%;
+    padding-left: 3%;
+    margin: 0 auto;
+    background: rgba(242, 240, 216);
+    border-radius: 60px;
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    /* border: 1.5px solid rgba(255, 255, 255, 0.35); */
+    overflow: hidden;
+}
+
+#player {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-right: 3vh;
+    height: 85vh;
+}
+
+.apparatus {
+    position: relative;
+    top: 2vh;
+    left: -3vw;
+    display: flex;
+}
+
+#vinyl {
+    position: relative;
+    width: 60vh;
+    height: 60vh;
+    top: 10vh;
+    left: 3vw;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    animation: vinyl-rotate 5s linear infinite;
+    animation-play-state: running;
+    user-select: none;
+}
+
+#vinyl.stopped {
+    animation-play-state: paused;
+}
+
+#progress-container {
+    position: relative;
+    top: 15vh;
+    width:60vh;
+    height: 8px;
+    background: rgba(194, 194, 194, 0.2);
+    border-radius: 4px;
+    margin: 2vh 0 0 0vw;   /* adjust left to match vinyl's left */
+    position: relative;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ffe066, #ff6f3c);
+    border-radius: 4px;
+    transition: width 0.2s linear;
+}
+
+#arm {
+    position: relative;
+    transform-origin: 50% 21%;
+    width: 20vh;
+    height: 51.4vh;
+    left: -4vw;
+    transition: transform 0.6s;
+    filter: drop-shadow(0 6px 16px rgba(0,0,0,0.50));
+    user-select: none;
+}
+
+#arm.arm-rotated {
+  transform: rotate(-30deg);
+  transition: transform 0.6s;
+}
+
+.records {
+    position: relative;
+    width: 16vw;
+    background-color: rgb(73 57 32 / 61%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+#records-title {
+    font-family: 'Montserrat Regular', serif;
+    color: rgb(255, 255, 255);
+    font-size: 3.5vh;
+}
+
+.record {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.cover {
+    position: relative;
+    object-fit: cover;
+    object-position: top;
+    border: 4px solid rgb(0, 0, 0);
+    width: 22vh;
+    height: 22vh;
+    z-index: 2;
+    box-shadow: 0 6px 18px 0 rgba(0,0,0,0.18), 0 2px 8px 0 rgba(0,0,0,0.10);
+    user-select: none;
+}
+
+.disc-wrapper {
+    position: absolute;
+    left: 4px;
+    width: 21vh;
+    height: 21vh;
+    transition: left 0.8s;
+    z-index: 0;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.disc-wrapper.out {
+    left: -8.5vw;
+}
+
+.disc {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Play button overlay on disc-wrapper when out and hovered (Font Awesome) */
+.disc-wrapper.out:hover::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 3px);
+    transform: translate(-50%, -50%);
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.disc-wrapper.out:hover::before {
+    content: '\f04b';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 3px);
+    transform: translate(-50%, -50%);
+    font-size: 2.8vh;
+    color: #fff;
+    pointer-events: none;
+    z-index: 11;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="preload" href="assets/fonts/MontserratBold.woff2" as="font" type="font/woff2" crossorigin>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="inspirations.css">
+        <title>Inspirations</title>
+    </head>
+
+    <body>
+        <div class="nav_bar">
+            <div class="button" id="home">
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+            </div>
+            <div class="button" id="education">
+                <a href="education.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    Education
+                </a>
+            </div>
+            <div class="button" id="hobbies">
+                <a href="hobbies.html">
+                    <i class="fas fa-heart"></i>
+                    Hobbies
+                </a>
+            </div>
+            <div class="button" id="inspirations">
+                <a href="inspirations.html">
+                    <i class="fas fa-lightbulb"></i>
+                    Inspirations
+                </a>
+            </div>
+        </div>
+
+        <div>
+            <div id="container">
+                <div id="player">
+                    <img class="stopped" draggable="false" id="vinyl" onclick="control" src="assets/images/vinyl.webp">
+                    <img class="arm-rotated" draggable="false" id="arm" src="assets/images/tone_arm.webp">
+                </div>
+
+                <div class="content">
+                    <div class="heading">
+                        Wall <span> of </span> <div>INSPIRATIONS</div>
+                        <div><img src="assets/images/deco.webp" id="deco"></div>
+                    </div>
+
+                    <div class="items">
+                        <div class="row">
+                            <div class="item" id="item1">
+                                <img src="assets/images/bajrangbali.webp" draggable="true" alt="Bajrangbali" class="icons" id="bajrangbali">
+                            </div>
+                        
+                            <div class="item" id="item2">
+                                <img src="assets/images/divine.webp" alt="Divine" class="icons" id="divine">
+                            </div>
+
+                            <div class="item" id="item3">
+                                <img src="assets/images/ali.webp" alt="Muhammad Ali" class="icons" id="ali">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="item" id="item4">
+                                <img src="assets/images/goggins.webp" alt="David Goggins" class="icons" id="goggins">
+                            </div>
+
+                            <div class="item" id="item5">
+                                <img src="assets/images/levrone.webp" alt="Kevin Levrone" class="icons" id="levrone">
+                            </div>
+
+                            <div class="item" id="item6">
+                                <img src="assets/images/kendrick.webp" alt="Kendrick Lamar" class="icons" id="kendrick">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="item" id="item6">
+                                <img src="assets/images/kobe.webp" alt="Kobe Bryant" class="icons" id="kobe">
+                            </div>
+    
+                            <div class="item" id="item6">
+                                <img src="assets/images/keanu.webp" alt="Keanu Reeves" class="icons" id="keanu">
+                            </div>
+                        </div>
+                                
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="inspirations.js"></script>
+
+    </body>
+
+</html>

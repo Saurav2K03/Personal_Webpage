@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url('assets/fonts/MontserratBold.woff2') format('woff2'),
+         url('assets/fonts/Montserratbold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url('assets/fonts/MontserratRegular.woff2') format('woff2'),
+         url('assets/fonts/MontserratRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kalam';
+    src: url('assets/fonts/Kalam-Light.woff2') format('woff2'),
+         url('assets/fonts/Kalam-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('assets/fonts/Cinzel-Regular.woff2') format('woff2'),
+         url('assets/fonts/Cinzel-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: whitesmoke;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.nav_bar {
+    position: relative;
+    font-family: 'Montserrat Bold', Arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding: 1.5%;
+    user-select: none;
+    z-index: 4;
+}
+
+#home {
+    padding-left: 10px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+}
+#education {
+    padding-left: 10px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+}
+#hobbies {
+    background-color: rgba(0, 0, 0, 0.127);
+    border-radius:4rem;
+    padding-left: 10px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+}
+#inspirations {
+    padding-left: 10px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+}
+
+.button:hover {
+    color:#a1a1a1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
