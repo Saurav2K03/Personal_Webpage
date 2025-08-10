@@ -74,7 +74,14 @@ window.addEventListener('DOMContentLoaded', () => {
             vinylImg: 'assets/images/vinyl_3.webp',
             playlist: [
                 // Add playlist3 tracks here if available
-                'assets/audio/playlist3/track1.mp3'
+                'assets/audio/playlist3/track1.mp3',
+                'assets/audio/playlist3/track2.mp3',
+                'assets/audio/playlist3/track3.mp3',
+                'assets/audio/playlist3/track4.mp3',
+                'assets/audio/playlist3/track5.mp3',
+                'assets/audio/playlist3/track6.mp3',
+                'assets/audio/playlist3/track7.mp3',
+                'assets/audio/playlist3/track8.mp3'
             ]
         }
     ];
@@ -82,19 +89,15 @@ window.addEventListener('DOMContentLoaded', () => {
     discConfigs.forEach((config, idx) => {
         const wrapper = document.getElementById(config.wrapperId);
         if (!wrapper) return;
-        // Add click event to play button overlay (on wrapper when out and hovered)
         wrapper.addEventListener('click', function(e) {
-            // Only trigger if out and hovered (simulate play button click)
             if (!wrapper.classList.contains('out')) return;
-            // Check if mouse is over the play button area
             const rect = wrapper.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            // Play button is roughly centered, radius 3vh
-            const centerX = rect.width/2 + 3; // matches CSS left: calc(50% + 3px)
+            const centerX = rect.width/2 + 3;
             const centerY = rect.height/2;
             const r = Math.sqrt((x-centerX)*(x-centerX)+(y-centerY)*(y-centerY));
-            if (r > rect.width*0.3) return; // Only trigger if click is near center
+            if (r > rect.width*0.3) return;
 
             // Set playlist and vinyl
             currentTrack = 0;
@@ -105,40 +108,44 @@ window.addEventListener('DOMContentLoaded', () => {
                 music.currentTime = 0;
                 music.play();
             }
-            // Replace vinyl image
             if (vinyl) {
                 vinyl.src = config.vinylImg;
                 vinyl.classList.remove('stopped');
             }
-            // Arm animation
             if (arm) {
                 arm.classList.remove('arm-rotated');
             }
-            // Slide disc back in after play
             setTimeout(() => {
                 wrapper.classList.remove('out');
-            }, 200); // allow a short delay for feedback
+            }, 200);
+            // Show only the relevant record details, hide others, and hide default-details
+            // Hide all record details
+            document.getElementById('record1-details').style.display = 'none';
+            document.getElementById('record2-details').style.display = 'none';
+            document.getElementById('record3-details').style.display = 'none';
+            // Show the correct one
+            const detailsId = `record${idx+1}-details`;
+            const detailsDiv = document.getElementById(detailsId);
+            if (detailsDiv) detailsDiv.style.display = '';
+            // Hide default-details
+            const defaultDetails = document.getElementById('default-details');
+            if (defaultDetails) defaultDetails.style.display = 'none';
             e.stopPropagation();
         });
     });
 
-    // Playlist functionality: play next song in assets/audio/playlist2/ when current ends
+    // Playlist functionality: play next song
     const playlist = [
-        'assets/audio/playlist2/track1.mp3',
-        'assets/audio/playlist2/track2.mp3',
-        'assets/audio/playlist2/track3.mp3',
-        'assets/audio/playlist2/track4.mp3',
-        'assets/audio/playlist2/track5.mp3',
-        'assets/audio/playlist2/track6.mp3',
-        'assets/audio/playlist2/track7.mp3',
-        'assets/audio/playlist2/track8.mp3'
+        'assets/audio/default.mp3'
     ];
     let currentTrack = 0;
     if (music && arm && vinyl) {
+        // Show default-details on load
+        const defaultDetails = document.getElementById('default-details');
+        if (defaultDetails) defaultDetails.style.display = '';
         music.addEventListener('ended', () => {
             arm.classList.add('arm-rotated');
             vinyl.classList.add('stopped');
-            // Play next track if available
             currentTrack++;
             if (currentTrack < playlist.length) {
                 music.src = playlist[currentTrack];
@@ -147,21 +154,15 @@ window.addEventListener('DOMContentLoaded', () => {
                     arm.classList.remove('arm-rotated');
                     vinyl.classList.remove('stopped');
                     music.play();
-                }, 600); // match arm transition
-            } else {
-                // Optionally loop playlist
-                // currentTrack = 0;
-                // music.src = playlist[currentTrack];
-                // music.currentTime = 0;
-                // setTimeout(() => {
-                //     arm.classList.remove('arm-rotated');
-                //     vinyl.classList.remove('stopped');
-                //     music.play();
-                // }, 600);
+                }, 600);
             }
         });
         // Ensure first track is loaded
         music.src = playlist[currentTrack];
+        // Hide all record details on load
+        document.querySelectorAll('.record-details-block').forEach((el) => {
+            if (el.id !== 'default-details') el.style.display = 'none';
+        });
     }
 
     const progressBar = document.getElementById('progress-bar');

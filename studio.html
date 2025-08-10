@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="preload" href="assets/fonts/MontserratBold.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/MontserratRegular.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/Baskerville-Italic.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/Baskerville-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="studio.css">
+        <title>Studio</title>
+    </head>
+
+    <body>
+        <div class="nav_bar">
+            <div class="button" id="home">
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+            </div>
+            <div class="button" id="education">
+                <a href="education.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    Education
+                </a>
+            </div>
+            <div class="button" id="hobbies">
+                <a href="hobbies.html">
+                    <i class="fas fa-heart"></i>
+                    Hobbies
+                </a>
+            </div>
+            <div class="button" id="studio">
+                <a href="studio.html">
+                    <i class="fas fa-lightbulb"></i>
+                    Studio
+                </a>
+            </div>
+        </div>
+
+        <div>
+            <div id="container">
+
+                <div id="player">
+                    <div class="apparatus">
+                        <img class="stopped" draggable="false" id="vinyl" onclick="control" src="assets/images/vinyl_0.webp">
+                        <img class="arm-rotated" draggable="false" id="arm" src="assets/images/tone_arm.webp">
+                        <audio id="music" src="assets/audio/default.mp3"></audio>
+                    </div>
+                    <div id="progress-container">
+                        <div id="progress-bar"></div>
+                    </div>
+                </div>
+
+                <div class="my-studio">
+                    <div class="studio-title">
+                    Saurav Singh
+                    </div>
+                    <div class="record-details">
+                        <div id="default-details" class="record-details-block">
+                            <div class="record-title">Welcome to My Studio</div>
+                            <p>This was my very first attempt at building a website—a small but heartfelt step toward exploring my creative side and learning something new at every stage of the process. From figuring out the basics of design to experimenting with different ideas, every page you see here has taught me something valuable.</p><br>
+                            <p>The website is simple in structure but full of personal touches. It begins with a Welcome page, followed by a page about my education, then one sharing my hobbies. Finally, we arrive at this Studio page—a place where I wanted to showcase a bit of myself through music, presented in the style of an old-school vinyl disc player. In the process, I created three playlists that mean a lot to me: INSPIRE, VALUES, and GYM HITS. Each one reflects a different side of my personality and passions.</p><br>
+                            <p>Here, you can play or pause music simply by tapping on the spinning vinyl disc. Each record can be accessed by clicking on its cover, letting you explore the playlists at your own pace—just like flipping through your favorite records in a collection.</p><br>
+                            <p>Thank you for taking the time to visit my little corner of the web. I hope you enjoyed browsing through it as much as I enjoyed creating it. This project might be small, but for me, it’s a big step forward—and just the beginning of many more creative journeys to come.</p><br>
+                            <p style="text-align: center; font-style: italic;">Thank You :)</p>
+                        </div>
+                        
+                        <div id="record1-details" class="record-details-block" style="display: none;">
+                            <div class="record-title">INSPIRE</div>
+                            <p>This playlist is more than just a collection of tracks—it’s the music that fuels my grind, lifts my mood, and keeps me pushing forward. Every song here has been on repeat during late-night work sessions, long walks, and moments when I needed that extra spark. DIVINE kicks things off with Too Hype and Teesri Manzil, tracks that remind me of resilience and ambition. Kendrick Lamar’s Man at the Garden and Reincarnated always make me stop and think, grounding me while still firing me up. Eminem steps in with Not Afraid and Mockingbird, both a reminder to stay true to myself no matter the odds. Survivor’s Eye of the Tiger is my go-to adrenaline shot, and Lashcurry’s Katu Vachan ft. Maashu wraps it all up with raw truth and energy. These are the songs I live by—each one a part of my story, each beat a step toward where I want to be.</p>
+                            <div class="tracklist">
+                              <table class="tracklist-table">
+                                <tr>
+                                  <td class="track-num">1.</td><td class="track-name">DIVINE Feat. Sid Sriram - Too Hype</td>
+                                  <td class="track-num">5.</td><td class="track-name">Eminem - Not Afraid</td>
+                                </tr>
+                                <tr>
+                                  <td class="track-num">2.</td><td class="track-name">DIVINE - Teesri Manzil</td>
+                                  <td class="track-num">6.</td><td class="track-name">Eminem - Mockingbird</td>
+                                </tr>
+                                <tr>
+                                  <td class="track-num">3.</td><td class="track-name">Kendrick Lamar - man at the Garden</td>
+                                  <td class="track-num">7.</td><td class="track-name">Survivor - Eye of the Tiger</td>
+                                </tr>
+                                <tr>
+                                  <td class="track-num">4.</td><td class="track-name">Kendrick Lamar - reincarnated</td>
+                                  <td class="track-num">8.</td><td class="track-name">Lashcurry - Katu Vachan ft. Maashu</td>
+                                </tr>
+                              </table>
+                            </div>
+                            <div class="record-footer">
+                                <p style="font-style: italic; text-align: center;">The music on this Compact Disc was originally recorded on analog equipment. We have attempted to preserve, as closely as possible, the sound of the original recording. Because of its high resolution, however, the Compact Disc can reveal limitations of the source tape.</p><br>
+                                <div style="text-align: center;">
+                                    &copy; 2025 Saurav Singh. All rights reserved. &reg;
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="record2-details" class="record-details-block" style="display: none;">
+                            <div class="record-title">VALUES</div>
+                            <p>This playlist is a deeply personal tribute to Hanuman Ji, blending devotion, energy, and the values I hold close to my heart. These songs are not just melodies—they’re prayers, memories, and affirmations of strength, courage, and faith. It begins with Daler Mehndi’s Aasman Ko Chukar, a childhood favorite that has stayed with me as a reminder to aim high and never lose belief. Narci’s Bajrangbali Aur Main captures the unbreakable bond between the devotee and the deity, while Agam Aggarwal’s Hey Mahaveer echoes with reverence for Hanuman Ji’s bravery. The devotional charm of Sudhir Vyas’s Ye Chamak Ye Dhamak paints a vivid picture of His grandeur. The heart of the playlist is carried by Rasraj Ji Maharaj, whose renditions of Veer Hanumana, Sankat Mochan Hanuman, Bajrang Baan, and Hanuman Chalisa immerse me in peace and focus, no matter where I am. Every track here is a reminder to live with strength, humility, and devotion—values inspired by Hanuman Ji that guide me daily.</p>
+                            <div class="tracklist">
+                              <table class="tracklist-table">
+                                <tr>
+                                  <td class="track-num">1.</td><td class="track-name">Daler Mehndi - Aasman Ko Chukar</td>
+                                  <td class="track-num">5.</td><td class="track-name">Rasraj Ji Maharaj - Veer Hanumana</td>
+                                </tr>
+                                <tr>
+                                  <td class="track-num">2.</td><td class="track-name">Narci - Bajrangbali Aur Main</td>
+                                  <td class="track-num">6.</td><td class="track-name">Rasraj Ji Maharaj - Sankat Mochan Hanuman</td>
+                                </tr>
+                                <tr>
+                                  <td class="track-num">3.</td><td class="track-name">Agam Aggarwal - Hey Mahaveer</td>
+                                  <td class="track-num">7.</td><td class="track-name">Rasraj Ji Maharaj - Bajrang Baan</td>
+                                </tr>
+                                <tr>
+                                  <td class="track-num">4.</td><td class="track-name">Sudhir Vyas - Ye Chamak Ye Dhamak</td>
+                                  <td class="track-num">8.</td><td class="track-name">Rasraj Ji Maharaj - Hanuman Chalisa</td>
+                                </tr>
+                              </table>
+                            </div>
+                            <div class="record-footer">
+                                <p style="font-style: italic; text-align: center;">The music on this Compact Disc was originally recorded on analog equipment. We have attempted to preserve, as closely as possible, the sound of the original recording. Because of its high resolution, however, the Compact Disc can reveal limitations of the source tape.</p><br>
+                                <div style="text-align: center;">
+                                    &copy; 2025 Saurav Singh. All rights reserved. &reg;
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="record3-details" class="record-details-block" style="display: none;">
+                            <div class="record-title">GYM HITS</div>
+                            <p>This playlist is my personal powerhouse—the soundtrack that transforms every gym session into a high-energy grind. It’s a carefully built mix of timeless anthems and fresh, modern hits, all chosen with one goal in mind: to keep my body moving and my mind locked in.</p><br>
+                            <p>The classics in here bring that raw, old-school energy—uncompromising riffs, punchy rhythms, and hooks that never lose their edge. They’re the tracks that have stood the test of time, the kind that instantly light a fire in your veins the moment they kick in. Alongside them are the newer, bass-heavy bangers—songs loaded with earth-shaking drops, hard kicks, and relentless beats that demand you give everything you’ve got.</p><br>
+                            <p>This is not background noise—it’s the pulse that drives every rep, every sprint, every heavy lift. From the moment the first track hits, there’s no easing in; it’s all intensity, all focus. By the time the final song fades, I’m drenched, satisfied, and ready to take on anything.</p><br>
+                            <p>GYM HITS is the difference between showing up and showing out. It’s the playlist that reminds me that strength is built not just with muscle, but with mindset—and nothing gets that mindset right like the perfect track at the perfect moment.</p><br>
+                            
+                            <div class="record-footer">
+                                <p style="font-style: italic; text-align: center;">The music on this Compact Disc was originally recorded on analog equipment. We have attempted to preserve, as closely as possible, the sound of the original recording. Because of its high resolution, however, the Compact Disc can reveal limitations of the source tape.</p><br>
+                                <div style="text-align: center;">
+                                    &copy; 2025 Saurav Singh. All rights reserved. &reg;
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="records">
+                    <div id="records-heading">RECORDS</div>
+                    <div class="record" id="record1">
+                        <img src="assets/images/cover1.webp" class="cover" id="cover1" draggable="false">
+                        <div class="disc-wrapper" id="discwrap1">
+                            <img src="assets/images/vinyl_1.webp" class="disc" id="disc1" draggable="false">
+                        </div>
+                    </div>
+                    <div class="record" id="record2">
+                        <img src="assets/images/cover2.webp" class="cover" id="cover2" draggable="false">
+                        <div class="disc-wrapper" id="discwrap2">
+                            <img src="assets/images/vinyl_2.webp" class="disc" id="disc2" draggable="false">
+                        </div>
+                    </div>
+                    <div class="record" id="record3">
+                        <img src="assets/images/cover3.webp" class="cover" id="cover3" draggable="false">
+                        <div class="disc-wrapper" id="discwrap3">
+                            <img src="assets/images/vinyl_3.webp" class="disc" id="disc3" draggable="false">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="studio.js"></script>
+
+    </body>
+
+</html>

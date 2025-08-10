@@ -38,6 +38,15 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Astonia';
+    src: url('assets/fonts/Astenia.woff2') format('woff2'),
+         url('assets/fonts/Astenia.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -85,7 +94,7 @@ html, body {
     padding-top: 8px;
     padding-bottom: 5px;
 }
-#inspirations {
+#studio {
     background-color: rgb(49 35 12);
     border-radius:4rem;
     padding-left: 10px;
@@ -111,10 +120,9 @@ a {
     padding-left: 3%;
     margin: 0 auto;
     background: rgba(242, 240, 216);
-    border-radius: 60px;
+    border-radius: 60px 0px 0px 60px;
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.18);
     backdrop-filter: blur(12px);
-    /* border: 1.5px solid rgba(255, 255, 255, 0.35); */
     overflow: hidden;
 }
 
@@ -122,7 +130,7 @@ a {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding-right: 3vh;
+    border-right: solid 4px rgba(73, 57, 32, 1);
     height: 85vh;
 }
 
@@ -165,7 +173,8 @@ a {
 #progress-bar {
     height: 100%;
     width: 0%;
-    background: linear-gradient(90deg, #ffe066, #ff6f3c);
+    background: linear-gradient(90deg, #b89c6a 0%, #f2e9da 100%);
+    /* #b89c6a is a warm brown, #f2e9da is a creamy beige */
     border-radius: 4px;
     transition: width 0.2s linear;
 }
@@ -186,19 +195,113 @@ a {
   transition: transform 0.6s;
 }
 
+.my-studio {
+    position: relative;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.3vh;
+    text-align: justify;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-right: 4vh;
+    padding-left: 4vh;
+}
+
+.studio-title {
+    position: relative;
+    font-family: 'Astonia', 'Baskerville Regular', serif;
+    font-size: 10vh;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    user-select: none;
+}
+
+.record-title {
+    position: relative;
+    font-family: 'Montserrat Bold', serif;
+    font-size: 3.5vh;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.tracklist {
+    position: relative;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.tracklist-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: none;
+  margin: 0;
+  padding: 0;
+  table-layout: fixed;
+}
+.tracklist-table tr {
+  background: none;
+}
+.tracklist-table td {
+  border: none;
+  background: none;
+  padding: 0 0 0.2em 0;
+  font-family: inherit;
+  font-size: inherit;
+  vertical-align: top;
+}
+.tracklist-table td.track-num {
+  width: 2.2em;
+  min-width: 2em;
+  text-align: right;
+  padding-right: 0.5em;
+  font-weight: normal;
+  font-family: inherit;
+}
+.tracklist-table td.track-name {
+  text-align: left;
+  word-break: break-word;
+  white-space: normal;
+  font-family: inherit;
+  font-weight: normal;
+  padding-left: 0;
+  text-indent: 0;
+}
+
+.tracklist > div {
+    text-align: left;
+    flex: 1;
+    min-width: 0;
+}
+
+.record-footer {
+    position: relative;
+    object-position: bottom;
+}
+
 .records {
     position: relative;
-    width: 16vw;
-    background-color: rgb(73 57 32 / 61%);
+    width: 14vw;
+    max-width: 14vw;
+    min-width: 14vw;
+    background-color: rgb(49 35 12);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2vh;
+    
 }
 
-#records-title {
-    font-family: 'Montserrat Regular', serif;
+#records-heading {
+    font-family: 'Montserrat Bold', serif;
+    background-color: rgb(49 35 12);
+    padding-bottom: 1vh;
+    width: 100%;
+    text-align: center;
     color: rgb(255, 255, 255);
     font-size: 3.5vh;
 }
@@ -215,7 +318,7 @@ a {
     position: relative;
     object-fit: cover;
     object-position: top;
-    border: 4px solid rgb(0, 0, 0);
+    border: 4px solid rgb(0 0 0);
     width: 22vh;
     height: 22vh;
     z-index: 2;
@@ -223,21 +326,31 @@ a {
     user-select: none;
 }
 
+
 .disc-wrapper {
     position: absolute;
     left: 4px;
     width: 21vh;
     height: 21vh;
-    transition: left 0.8s;
     z-index: 0;
     user-select: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Animation setup */
+    transition: left 0.8s cubic-bezier(0.77,0,0.175,1), transform 0.8s cubic-bezier(0.77,0,0.175,1);
+    transform: rotate(0deg);
 }
 
 .disc-wrapper.out {
     left: -8.5vw;
+    /* Roll out effect: rotate as it comes out */
+    transform: rotate(-30deg);
+}
+
+.disc-wrapper:not(.out) {
+    /* Roll in effect: rotate back to 0 */
+    transform: rotate(0deg);
 }
 
 .disc {

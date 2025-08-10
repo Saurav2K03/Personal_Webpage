@@ -1,3 +1,4 @@
+
 const elements = document.getElementsByClassName("elements");
 
 for (let i = 0; i < elements.length; i++) {
@@ -44,4 +45,3 @@ for (let i = 0; i < elements.length; i++) {
         }   
     });
 }
-
