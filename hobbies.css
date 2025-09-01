@@ -97,3 +97,10 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+#banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
