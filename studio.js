@@ -12,7 +12,7 @@ function control() {
             setTimeout(() => {
                 vinyl.classList.remove('stopped');
                 music.play();
-            }, 600); // match CSS transition duration
+            }, 200); // match CSS transition duration
         }
     }
 }

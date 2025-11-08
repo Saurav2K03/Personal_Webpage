@@ -8,12 +8,15 @@
         <link rel="preload" href="assets/fonts/SigokaeDemoRegular.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="assets/images/overlay_1.webp" as="image">
         <link rel="preload" href="assets/images/bg_1.webp" as="image">
-
+        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link href="index.css" rel="stylesheet">
         <title>My Webpage</title>
     </head>
     <body>
+        <!-- put this near top of body, after your video so leaves are above the video but behind content if desired -->
+        <div id="floating-leaves" aria-hidden="true"></div>
+
         <div class="nav_bar">
             <div class="button" id="home">
                 <a href="index.html">
@@ -41,10 +44,16 @@
             </div>
         </div>
 
+        <!-- <video autoplay muted loop id="leaves-video">
+            <source src="assets/video/background2.webm" type="video/webm">
+        </video> -->
+
         <div class="overlay-container">
             <div id="overlay-text">SAURAV SINGH</div>
             <img src="assets/images/overlay_1.webp" alt="overlay" id="overlay-image">
         </div>
+        <!-- front leaves container: leaves appended here will appear above the overlay image -->
+        <div id="floating-leaves-front" aria-hidden="true"></div>
         
         <div class="intro">
             <div id="intro-title">WELCOME!</div>
